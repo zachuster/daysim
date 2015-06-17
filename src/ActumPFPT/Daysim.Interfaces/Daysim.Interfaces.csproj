@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E2F1A58-456B-41A6-B7C7-65F02C313438}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Daysim.Interfaces</RootNamespace>
+    <AssemblyName>Daysim.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IChoiceModel.cs" />
+    <Compile Include="ICoefficient.cs" />
+    <Compile Include="ICoefficientsReader.cs" />
+    <Compile Include="ICondensedParcel.cs" />
+    <Compile Include="IFullHalfTourWrapper.cs" />
+    <Compile Include="IHalfTour.cs" />
+    <Compile Include="IHousehold.cs" />
+    <Compile Include="IHouseholdDay.cs" />
+    <Compile Include="IHouseholdDayPersister.cs" />
+    <Compile Include="IHouseholdDayWrapper.cs" />
+    <Compile Include="IHouseholdDayWrapperCreator.cs" />
+    <Compile Include="IHouseholdPersister.cs" />
+    <Compile Include="IHouseholdTotals.cs" />
+    <Compile Include="IHouseholdWrapper.cs" />
+    <Compile Include="IHouseholdWrapperCreator.cs" />
+    <Compile Include="IImporter.cs" />
+    <Compile Include="IImporterFactory.cs" />
+    <Compile Include="IJointTourWrapper.cs" />
+    <Compile Include="IMinuteSpan.cs" />
+    <Compile Include="IModel.cs" />
+    <Compile Include="IParcel.cs" />
+    <Compile Include="IPartialHalfTourWrapper.cs" />
+    <Compile Include="IPerson.cs" />
+    <Compile Include="IPersonDay.cs" />
+    <Compile Include="IPersonDayPersister.cs" />
+    <Compile Include="IPersonDayWrapper.cs" />
+    <Compile Include="IPersonDayWrapperCreator.cs" />
+    <Compile Include="IPersonPersister.cs" />
+    <Compile Include="IPersonWrapper.cs" />
+    <Compile Include="IPersonWrapperCreator.cs" />
+    <Compile Include="IPoint.cs" />
+    <Compile Include="IRandomUniform01.cs" />
+    <Compile Include="IRandomUtility.cs" />
+    <Compile Include="ITimeWindow.cs" />
+    <Compile Include="ITour.cs" />
+    <Compile Include="ITourModeImpedance.cs" />
+    <Compile Include="ITourPersister.cs" />
+    <Compile Include="ITourWrapper.cs" />
+    <Compile Include="ITourWrapperCreator.cs" />
+    <Compile Include="ITrip.cs" />
+    <Compile Include="ITripModeImpedance.cs" />
+    <Compile Include="ITripPersister.cs" />
+    <Compile Include="ITripWrapper.cs" />
+    <Compile Include="ITripWrapperCreator.cs" />
+    <Compile Include="IZoneItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Daysim.Attributes\Daysim.Attributes.csproj">
+      <Project>{21074f50-9ef1-4fac-afd4-8234af16f55a}</Project>
+      <Name>Daysim.Attributes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

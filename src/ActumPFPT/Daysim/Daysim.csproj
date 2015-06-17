@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C89E2003-E353-43B8-BF0A-9A821945933A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Daysim</RootNamespace>
+    <AssemblyName>Daysim</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>c:\temp\DaySim2.0\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationRevision>139</ApplicationRevision>
+    <ApplicationVersion>2.0.3.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SampingPOC.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;RELEASE;</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\SampingPOC.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\DaysimRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Parallel Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Parallel Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SampingPOC.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HDF5DotNet, Version=1.8.9.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\HDF5DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="NDesk.Options">
+      <HintPath>..\packages\ndesk-options-0.2.1.bin\lib\ndesk-options\NDesk.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject-2.2.0.0\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChoiceModels\Actum\ActumJointTourGenerationModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChoiceModels\Actum\ActumPrimaryPriorityTimeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumHouseholdDayPatternTypeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumWorkAtHomeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumMandatoryTourGenerationModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumWorkBasedSubtourGenerationModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumJointHalfTourGenerationModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumFullJointHalfTourParticipationModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumPersonDayPatternTypeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumPartialJointHalfTourParticipationModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumPartialJointHalfTourChauffeurModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumJointTourParticipationModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumPersonDayPatternModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumPersonTourGenerationModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumMandatoryStopPresenceModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumTourDestinationModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumWorkTourModeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumEscortTourModeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumOtherHomeBasedTourModeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumWorkBasedSubtourModeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumWorkTourTimeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumSchoolTourModeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumSchoolTourTimeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumOtherHomeBasedTourTimeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumWorkBasedSubtourTimeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumIntermediateStopGenerationModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumIntermediateStopLocationModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumTripModeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumTripTimeModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumPrimaryPriorityTimeScheduleModel.cs" />
+    <Compile Include="ChoiceModels\Actum\ActumTourModeTimeModel.cs" />
+    <Compile Include="ChoiceModels\AutoOwnershipModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChoiceModels\ChoiceModel.cs" />
+    <Compile Include="ChoiceModels\H\HAutoOwnershipModel.cs" />
+    <Compile Include="ChoiceModels\H\HEscortTourModeModel.cs" />
+    <Compile Include="ChoiceModels\H\HMandatoryStopPresenceModel.cs" />
+    <Compile Include="ChoiceModels\H\HPayToParkAtWorkplaceModel.cs" />
+    <Compile Include="ChoiceModels\H\HPersonTourGenerationModel.cs" />
+    <Compile Include="ChoiceModels\H\HSchoolLocationModel.cs" />
+    <Compile Include="ChoiceModels\H\HTourModeTimeModel.cs" />
+    <Compile Include="ChoiceModels\H\HTransitPassOwnershipModel.cs" />
+    <Compile Include="ChoiceModels\H\HTripTimeModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChoiceModels\H\HWorkBasedSubtourGenerationModel.cs" />
+    <Compile Include="ChoiceModels\H\HWorkAtHomeModel.cs" />
+    <Compile Include="ChoiceModels\H\HPersonDayPatternTypeModel.cs" />
+    <Compile Include="ChoiceModels\H\HPartialJointHalfTourParticipationModel.cs" />
+    <Compile Include="ChoiceModels\H\HPartialJointHalfTourChauffeurModel.cs" />
+    <Compile Include="ChoiceModels\H\HMandatoryTourGenerationModel.cs" />
+    <Compile Include="ChoiceModels\H\HJointTourParticipationModel.cs" />
+    <Compile Include="ChoiceModels\H\HJointTourGenerationModel.cs" />
+    <Compile Include="ChoiceModels\H\HJointHalfTourGenerationModel.cs" />
+    <Compile Include="ChoiceModels\H\HHouseholdDayPatternTypeModel.cs" />
+    <Compile Include="ChoiceModels\H\HFullJointHalfTourParticipationModel.cs" />
+    <Compile Include="ChoiceModels\H\HPersonDayPatternModel.cs" />
+    <Compile Include="ChoiceModels\H\HWorkLocationModel.cs" />
+    <Compile Include="ChoiceModels\H\HTourDestinationModel.cs" />
+    <Compile Include="ChoiceModels\H\HWorkTourModeModel.cs" />
+    <Compile Include="ChoiceModels\H\HSchoolTourModeModel.cs" />
+    <Compile Include="ChoiceModels\H\HOtherHomeBasedTourModeModel.cs" />
+    <Compile Include="ChoiceModels\H\HIntermediateStopGenerationModel.cs" />
+    <Compile Include="ChoiceModels\H\HIntermediateStopLocationModel.cs" />
+    <Compile Include="ChoiceModels\H\HTripModeModel.cs" />
+    <Compile Include="ChoiceModels\H\HWorkBasedSubtourModeModel.cs" />
+    <Compile Include="ChoiceModels\H\HWorkUsualModeAndScheduleModel.cs" />
+    <Compile Include="ChoiceModels\PayToParkAtWorkplaceModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChoiceModels\SchoolLocationModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChoiceModels\TransitPassOwnershipModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChoiceModels\TripModeModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChoiceModels\WorkLocationModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChoiceModels\WorkTourModeModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChoiceModels\WorkTourTimeModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainModels\ParcelNodeWrapper.cs" />
+    <Compile Include="DomainModels\ParkAndRideNodeWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\PersisterWithHDF5.cs" />
+    <Compile Include="DomainModels\TransitStopArea.cs" />
+    <Compile Include="Factories\Actum\ActumHouseholdDayWrapperCreator.cs" />
+    <Compile Include="Factories\Actum\ActumPersonDayWrapperCreator.cs" />
+    <Compile Include="Factories\Actum\ActumTourWrapperCreator.cs" />
+    <Compile Include="Factories\Actum\ActumTripWrapperCreator.cs" />
+    <Compile Include="DomainModels\Actum\ActumHouseholdDayWrapper.cs" />
+    <Compile Include="Factories\Actum\ActumHouseholdWrapperCreator.cs" />
+    <Compile Include="Factories\Actum\ActumPersonWrapperCreator.cs" />
+    <Compile Include="DomainModels\Actum\ActumHousehold.cs" />
+    <Compile Include="DomainModels\Actum\ActumHouseholdDay.cs" />
+    <Compile Include="DomainModels\Actum\ActumHouseholdWrapper.cs" />
+    <Compile Include="DomainModels\Actum\ActumPerson.cs" />
+    <Compile Include="DomainModels\Actum\ActumPersonDay.cs" />
+    <Compile Include="DomainModels\Actum\ActumPersonDayWrapper.cs" />
+    <Compile Include="DomainModels\Actum\ActumPersonWrapper.cs" />
+    <Compile Include="DomainModels\Actum\ActumTourWrapper.cs" />
+    <Compile Include="DomainModels\Actum\ActumTrip.cs" />
+    <Compile Include="DomainModels\Actum\ActumTripWrapper.cs" />
+    <Compile Include="Factories\HouseholdDayPersistenceFactory.cs" />
+    <Compile Include="Factories\HouseholdDayPersister.cs" />
+    <Compile Include="Factories\HouseholdDayWrapperCreator.cs" />
+    <Compile Include="Factories\HouseholdDayWrapperFactory.cs" />
+    <Compile Include="DomainModels\ParcelNode.cs" />
+    <Compile Include="Factories\PersonDayPersistenceFactory.cs" />
+    <Compile Include="Factories\PersonDayPersister.cs" />
+    <Compile Include="Factories\PersonDayWrapperCreator.cs" />
+    <Compile Include="Factories\PersonDayWrapperFactory.cs" />
+    <Compile Include="Factories\TourPersistenceFactory.cs" />
+    <Compile Include="Factories\TourPersister.cs" />
+    <Compile Include="Factories\HouseholdPersistenceFactory.cs" />
+    <Compile Include="Factories\HouseholdPersister.cs" />
+    <Compile Include="Factories\HouseholdWrapperCreator.cs" />
+    <Compile Include="Factories\HouseholdWrapperFactory.cs" />
+    <Compile Include="Factories\Hdf5Persister.cs" />
+    <Compile Include="HTourModeTime.cs" />
+    <Compile Include="HTripTime.cs" />
+    <Compile Include="ISamplingWeightsSettings.cs" />
+    <Compile Include="ModelRunners\ActumChoiceModelRunner.cs" />
+    <Compile Include="ModelRunners\ChoiceModelFactory.cs" />
+    <Compile Include="ModelRunners\ChoiceModelUtility.cs" />
+    <Compile Include="ChoiceModels\EscortTourModeModel.cs" />
+    <Compile Include="ChoiceModels\IntermediateStopGenerationModel.cs" />
+    <Compile Include="ChoiceModels\OtherHomeBasedTourModeModel.cs" />
+    <Compile Include="ChoiceModels\OtherHomeBasedTourTimeModel.cs" />
+    <Compile Include="ChoiceModels\OtherTourDestinationModel.cs" />
+    <Compile Include="ChoiceModels\PathTypeModel.cs" />
+    <Compile Include="ChoiceModels\PersonExactNumberOfToursModel.cs" />
+    <Compile Include="ChoiceModels\SchoolTourTimeModel.cs" />
+    <Compile Include="ChoiceModels\TripTimeModel.cs" />
+    <Compile Include="ChoiceModels\WorkBasedSubtourGenerationModel.cs" />
+    <Compile Include="ChoiceModels\WorkBasedSubtourModeModel.cs" />
+    <Compile Include="ChoiceModels\WorkBasedSubtourTimeModel.cs" />
+    <Compile Include="ChoiceModels\WorkTourDestinationModel.cs" />
+    <Compile Include="DomainModels\FullHalfTourWrapper.cs" />
+    <Compile Include="DomainModels\JointTourWrapper.cs" />
+    <Compile Include="DomainModels\ListExtensions.cs" />
+    <Compile Include="DomainModels\ParkAndRideNode.cs" />
+    <Compile Include="DomainModels\PartialHalfTourWrapper.cs" />
+    <Compile Include="DomainModels\PointExtensions.cs" />
+    <Compile Include="DomainModels\Subzone.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="ModelRunners\HouseholdChoiceModelRunner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParkAndRideNodeDao.cs" />
+    <Compile Include="ParkAndRideShadowPricing\ParkAndRideShadowPriceCalculator.cs" />
+    <Compile Include="ParkAndRideShadowPricing\ParkAndRideShadowPriceWriter.cs" />
+    <Compile Include="ParkAndRideShadowPricing\ParkAndRideShadowPriceReader.cs" />
+    <Compile Include="ParkAndRideShadowPricing\ParkAndRideShadowPriceNode.cs" />
+    <Compile Include="Factories\PersonPersistenceFactory.cs" />
+    <Compile Include="Factories\PersonPersister.cs" />
+    <Compile Include="Factories\PersonWrapperCreator.cs" />
+    <Compile Include="Factories\PersonWrapperFactory.cs" />
+    <Compile Include="RawConverter.cs" />
+    <Compile Include="DomainModels\CondensedParcelExtensions.cs" />
+    <Compile Include="AggregateLogsumsExporter.cs" />
+    <Compile Include="DomainModels\FullHalfTour.cs" />
+    <Compile Include="DomainModels\HouseholdDay.cs" />
+    <Compile Include="DomainModels\HouseholdDayWrapper.cs" />
+    <Compile Include="DomainModels\HouseholdWrapper.cs" />
+    <Compile Include="ChoiceModels\IntermediateStopLocationModel.cs" />
+    <Compile Include="DomainModels\JointTour.cs" />
+    <Compile Include="DomainModels\PartialHalfTour.cs" />
+    <Compile Include="DomainModels\PersonDay.cs" />
+    <Compile Include="DomainModels\PersonDayWrapper.cs" />
+    <Compile Include="DomainModels\PersonWrapper.cs" />
+    <Compile Include="ChoiceModels\SchoolTourModeModel.cs" />
+    <Compile Include="DayPeriod.cs" />
+    <Compile Include="AggregateLogsumsCalculator.cs" />
+    <Compile Include="ModelRunners\ChoiceModelRunner.cs" />
+    <Compile Include="ChoiceModels\IndividualPersonDayPatternModel.cs" />
+    <Compile Include="DaysimModule.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="DomainModels\Household.cs" />
+    <Compile Include="DomainModels\Parcel.cs" />
+    <Compile Include="DomainModels\ParcelExtensions.cs" />
+    <Compile Include="DomainModels\Person.cs" />
+    <Compile Include="DomainModels\Tour.cs" />
+    <Compile Include="DomainModels\TourWrapper.cs" />
+    <Compile Include="DomainModels\Trip.cs" />
+    <Compile Include="DomainModels\TripWrapper.cs" />
+    <Compile Include="DomainModels\ZoneTotals.cs" />
+    <Compile Include="DomainModels\ZoneTotalsExtensions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DomainModels\CondensedParcel.cs" />
+    <Compile Include="SamplingWeightsCalculator.cs" />
+    <Compile Include="SamplingWeightsSettingsFactory.cs" />
+    <Compile Include="DomainModels\Zone.cs" />
+    <Compile Include="SamplingWeightsExporter.cs" />
+    <Compile Include="SamplingWeightsSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SamplingWeightsSettingsSimple.cs" />
+    <Compile Include="ShadowPricing\ShadowPriceCalculator.cs" />
+    <Compile Include="ShadowPricing\ShadowPriceParcel.cs" />
+    <Compile Include="ShadowPricing\ShadowPriceReader.cs" />
+    <Compile Include="ShadowPricing\ShadowPriceWriter.cs" />
+    <Compile Include="ShadowPricing\ShadowPriceZone.cs" />
+    <Compile Include="TDMTripListExporter.cs" />
+    <Compile Include="Factories\TourWrapperCreator.cs" />
+    <Compile Include="Factories\TourWrapperFactory.cs" />
+    <Compile Include="Factories\TripPersistenceFactory.cs" />
+    <Compile Include="Factories\TripPersister.cs" />
+    <Compile Include="Factories\TripWrapperCreator.cs" />
+    <Compile Include="Factories\TripWrapperFactory.cs" />
+    <Compile Include="TourTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TripTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\Daysim.Framework\CustomDictionary.xml">
+      <Link>CustomDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+    <Content Include="COPYING">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Daysim.Attributes\Daysim.Attributes.csproj">
+      <Project>{21074f50-9ef1-4fac-afd4-8234af16f55a}</Project>
+      <Name>Daysim.Attributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Daysim.Framework\Daysim.Framework.csproj">
+      <Project>{33842B3A-A2CB-4B61-933B-811CED8CF74B}</Project>
+      <Name>Daysim.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Daysim.Interfaces\Daysim.Interfaces.csproj">
+      <Project>{4e2f1a58-456b-41a6-b7c7-65f02c313438}</Project>
+      <Name>Daysim.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

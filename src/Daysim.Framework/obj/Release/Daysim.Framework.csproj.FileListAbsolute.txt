@@ -1,0 +1,15 @@
+C:\daysim417\Daysim.Framework\bin\Release\CaliperMTXNet64.dll
+C:\daysim417\Daysim.Framework\bin\Release\CaliperMtxS.dll
+C:\daysim417\Daysim.Framework\bin\Release\hdf5dll.dll
+C:\daysim417\Daysim.Framework\bin\Release\hdf5_hldll.dll
+C:\daysim417\Daysim.Framework\bin\Release\szip.dll
+C:\daysim417\Daysim.Framework\bin\Release\zlib.dll
+C:\daysim417\Daysim.Framework\bin\Release\Daysim.Framework.dll
+C:\daysim417\Daysim.Framework\bin\Release\Daysim.Framework.pdb
+C:\daysim417\Daysim.Framework\bin\Release\HDF5DotNet.dll
+C:\daysim417\Daysim.Framework\bin\Release\Ninject.dll
+C:\daysim417\Daysim.Framework\bin\Release\Ninject.pdb
+C:\daysim417\Daysim.Framework\bin\Release\Ninject.xml
+C:\daysim417\Daysim.Framework\obj\Release\Daysim.Framework.csprojResolveAssemblyReference.cache
+C:\daysim417\Daysim.Framework\obj\Release\Daysim.Framework.dll
+C:\daysim417\Daysim.Framework\obj\Release\Daysim.Framework.pdb

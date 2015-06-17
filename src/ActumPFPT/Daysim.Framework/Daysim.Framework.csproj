@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33842B3A-A2CB-4B61-933B-811CED8CF74B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Daysim.Framework</RootNamespace>
+    <AssemblyName>Daysim.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Parallel Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Parallel Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Daysim.Framework.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HDF5DotNet">
+      <HintPath>..\HDF5DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject-2.2.0.0\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\alglibinternal.cs" />
+    <Compile Include="Core\ap.cs" />
+    <Compile Include="Core\AsciiTable.cs" />
+    <Compile Include="Core\ChoiceModelDictionary.cs" />
+    <Compile Include="Core\ChoiceModelHelper.cs" />
+    <Compile Include="Core\ChoiceProbabilityCalculator.cs" />
+    <Compile Include="Core\ChoiceProbabilityFactory.cs" />
+    <Compile Include="Core\ChosenAlternative.cs" />
+    <Compile Include="Core\Coefficient.cs" />
+    <Compile Include="Core\CoefficientsReader.cs" />
+    <Compile Include="Core\Configuration.cs" />
+    <Compile Include="Core\ConfigurationManager.cs" />
+    <Compile Include="Core\ChosenParcelNotSetInEstimationModeException.cs" />
+    <Compile Include="Core\ChoiceModelRunnerException.cs" />
+    <Compile Include="Core\HouseholdDayModelException.cs" />
+    <Compile Include="Core\EngineExtensions.cs" />
+    <Compile Include="Core\IChoiceModelRunner.cs" />
+    <Compile Include="Core\ICoefficientsReader.cs" />
+    <Compile Include="Core\MissingShortDistanceCircuityMeasuresException.cs" />
+    <Compile Include="Core\InvalidTimeCoefficientException.cs" />
+    <Compile Include="Core\RandomUniform01.cs" />
+    <Compile Include="Core\specialfunctions.cs" />
+    <Compile Include="Core\SubtourModelException.cs" />
+    <Compile Include="Core\TripModelException.cs" />
+    <Compile Include="Core\TourModelException.cs" />
+    <Compile Include="Core\PersonDayModelException.cs" />
+    <Compile Include="Core\PersonModelException.cs" />
+    <Compile Include="Core\HouseholdModelException.cs" />
+    <Compile Include="Core\FileSizeFormatProvider.cs" />
+    <Compile Include="Core\InvalidParkAndRideZoneIdException.cs" />
+    <Compile Include="Core\InvalidSkimRowException.cs" />
+    <Compile Include="Core\InvalidDepartureTimeException.cs" />
+    <Compile Include="Core\MetadataAttribute.cs" />
+    <Compile Include="Core\MinuteSpan.cs" />
+    <Compile Include="Core\PrintFile.cs" />
+    <Compile Include="Core\TimeWindow.cs" />
+    <Compile Include="Core\UndefinedInputPathException.cs" />
+    <Compile Include="Core\MissingHeaderException.cs" />
+    <Compile Include="Core\VotGroupNotFoundException.cs" />
+    <Compile Include="Core\InvalidCombinationException.cs" />
+    <Compile Include="Core\InvalidPathTypeException.cs" />
+    <Compile Include="Core\InvalidTourDirectionException.cs" />
+    <Compile Include="Core\IObservationItem.cs" />
+    <Compile Include="Core\TourModeImpedance.cs" />
+    <Compile Include="Core\TripModeImpedance.cs" />
+    <Compile Include="Core\Logger.cs" />
+    <Compile Include="Core\ValueIsInfinityException.cs" />
+    <Compile Include="Core\ValueIsNaNException.cs" />
+    <Compile Include="Core\Extensions.cs" />
+    <Compile Include="Core\Global.cs" />
+    <Compile Include="Core\RandomUtility.cs" />
+    <Compile Include="Core\SkimMatrixNotFoundException.cs" />
+    <Compile Include="Core\RosterEntryNotFoundException.cs" />
+    <Compile Include="Core\Timer.cs" />
+    <Compile Include="Core\Utility.cs" />
+    <Compile Include="Core\VariableNotFoundException.cs" />
+    <Compile Include="Core\ErrorReadingSkimFileException.cs" />
+    <Compile Include="Core\InfinitePartitioner.cs" />
+    <Compile Include="Core\ParallelUtility.cs" />
+    <Compile Include="Core\SegmentRemainsUnassignedException.cs" />
+    <Compile Include="Core\SkimFileTypeNotSupportedException.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Persistence\Exporter.cs" />
+    <Compile Include="Persistence\ExporterFactory.cs" />
+    <Compile Include="Persistence\Hdf5Exporter.cs" />
+    <Compile Include="Persistence\Importer.cs" />
+    <Compile Include="Persistence\ImporterExtensions.cs" />
+    <Compile Include="Persistence\ImporterFactory.cs" />
+    <Compile Include="Persistence\Element.cs" />
+    <Compile Include="Persistence\ISavable.cs" />
+    <Compile Include="Persistence\ModelUtility.cs" />
+    <Compile Include="Persistence\Reader.cs" />
+    <Compile Include="Persistence\ThreadQueue.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roster\BinarySkimFileReader.cs" />
+    <Compile Include="Roster\BinarySkimFileReaderCreator.cs" />
+    <Compile Include="Roster\CubeReaderCreator.cs" />
+    <Compile Include="Roster\CubeSkimFileReader.cs" />
+    <Compile Include="Roster\EMMEReaderCreator.cs" />
+    <Compile Include="Roster\EMMESkimFileReader.cs" />
+    <Compile Include="Roster\HDF5ReaderCreator.cs" />
+    <Compile Include="Roster\HDF5SkimFileReader.cs" />
+    <Compile Include="Roster\IFileReaderCreator.cs" />
+    <Compile Include="Roster\ImpedanceRoster.cs" />
+    <Compile Include="Roster\ImpedanceRosterLoader.cs" />
+    <Compile Include="Roster\ISkimFileReader.cs" />
+    <Compile Include="Roster\RosterEntry.cs" />
+    <Compile Include="Roster\SkimFileReaderFactory.cs" />
+    <Compile Include="Roster\SkimMatrix.cs" />
+    <Compile Include="Roster\SkimValue.cs" />
+    <Compile Include="Roster\TextIJSkimFileReader.cs" />
+    <Compile Include="Roster\TextIJSkimFileReaderCreator.cs" />
+    <Compile Include="Sampling\ITour.cs" />
+    <Compile Include="Sampling\ITrip.cs" />
+    <Compile Include="Sampling\WeightSegmentItem.cs" />
+    <Compile Include="Sampling\SizeSegmentItem.cs" />
+    <Compile Include="Sampling\DestinationSampler.cs" />
+    <Compile Include="Sampling\ISampleItem.cs" />
+    <Compile Include="Sampling\ISamplingUtilities.cs" />
+    <Compile Include="Sampling\SegmentZone.cs" />
+    <Compile Include="Sampling\SegmentZoneFormatter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="CustomDictionary.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Daysim.Attributes\Daysim.Attributes.csproj">
+      <Project>{21074f50-9ef1-4fac-afd4-8234af16f55a}</Project>
+      <Name>Daysim.Attributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Daysim.Interfaces\Daysim.Interfaces.csproj">
+      <Project>{4e2f1a58-456b-41a6-b7c7-65f02c313438}</Project>
+      <Name>Daysim.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

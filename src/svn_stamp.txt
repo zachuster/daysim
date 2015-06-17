@@ -1,0 +1,2 @@
+Highest Commit $WCREV$
+Date of Commit $WCDATE$
